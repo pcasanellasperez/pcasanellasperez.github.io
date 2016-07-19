@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body>
+<body>
 
-    {% include header.html %}
+  {% include header.html %}
 
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+  <main id="site-main">
+    <header id="site-header" class="jumbotron">
+      <div class="container">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.description }}</p>
+        <p><a rel="nofollow" class="btn btn-warning btn-lg" href="{{ site.github_url }}">Ver en GitHub</a></p>
       </div>
+    </header>
+    <div id="site-content" class="container">
+    {{ content }}
     </div>
+  </main>
 
-    {% include footer.html %}
+  {% include footer.html %}
 
-  </body>
-
+</body>
 </html>
